@@ -36,6 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("food"),
       ),
+      body: Center(
+        child: Text("food"),
+      ),
+
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
