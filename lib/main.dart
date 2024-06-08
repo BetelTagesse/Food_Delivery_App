@@ -37,7 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("food"),
       ),
       body: Center(
-        child: Text("food"),
+        child: Row(
+          children: [
+            Text("food"),
+            Text("food"),
+            Text("food"),
+            Text("food"),
+            Text("food"),
+          ],
+        ),
       ),
 
       // This trailing comma makes auto-formatting nicer for build methods.
