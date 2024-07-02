@@ -26,7 +26,9 @@ class MyTextField extends StatelessWidget {
                 borderSide:
                     BorderSide(color: Theme.of(context).colorScheme.primary),
               ),
-              hintText: hintText),
+              hintText: hintText,
+              hintStyle:
+                  TextStyle(color: Theme.of(context).colorScheme.primary)),
         ));
   }
 }
