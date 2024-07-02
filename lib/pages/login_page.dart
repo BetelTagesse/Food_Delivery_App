@@ -14,17 +14,21 @@ class LoginPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.lock),
+          Icon(Icons.lock_open,
+              size: 56, color: Theme.of(context).colorScheme.inversePrimary),
+          SizedBox(height: 20),
           Text(
             'Food Delivery App',
             style:
                 TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
           ),
+          SizedBox(height: 20),
           MyTextField(
             controller: emailController,
             obscureText: false,
             hintText: 'Email',
           ),
+          SizedBox(height: 20),
           MyTextField(
             controller: passwordController,
             obscureText: true,
