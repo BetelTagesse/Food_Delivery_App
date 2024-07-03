@@ -35,6 +35,7 @@ class LoginPage extends StatelessWidget {
             obscureText: true,
             hintText: 'Password',
           ),
+          SizedBox(height: 20),
           MyButton(onTap: () {}, text: 'Sign in')
         ],
       ),
