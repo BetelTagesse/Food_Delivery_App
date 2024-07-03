@@ -42,12 +42,18 @@ class _RegisterPageState extends State<RegisterPage> {
             obscureText: true,
             hintText: 'Password',
           ),
+          SizedBox(height: 10),
+          MyTextField(
+            controller: confirmPasswordController,
+            obscureText: true,
+            hintText: 'Password',
+          ),
           SizedBox(height: 20),
-          MyButton(onTap: () {}, text: 'Sign in'),
+          MyButton(onTap: () {}, text: 'Sign Up'),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Not a member?',
+              Text('Already have  an account?',
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontSize: 16)),
@@ -56,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               GestureDetector(
                   onTap: widget.onTap,
-                  child: Text('Register here',
+                  child: Text('Login here',
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.inversePrimary,
                           fontSize: 16,
