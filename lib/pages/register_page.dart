@@ -48,8 +48,9 @@ class _RegisterPageState extends State<RegisterPage> {
             obscureText: true,
             hintText: 'Password',
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           MyButton(onTap: () {}, text: 'Sign Up'),
+          SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -58,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontSize: 16)),
               SizedBox(
-                width: 20,
+                width: 10,
               ),
               GestureDetector(
                   onTap: widget.onTap,
