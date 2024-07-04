@@ -36,7 +36,25 @@ class LoginPage extends StatelessWidget {
             hintText: 'Password',
           ),
           SizedBox(height: 20),
-          MyButton(onTap: () {}, text: 'Sign in')
+          MyButton(onTap: () {}, text: 'Sign in'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Not a member?',
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontSize: 16)),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                  child: Text('Register here',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold)))
+            ],
+          )
         ],
       ),
     );
