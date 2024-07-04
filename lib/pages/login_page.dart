@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
 
-class LoginPage extends StatelessWidget {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+class LoginPage extends StatefulWidget {
+  final void Function()? onTap;
 
-  LoginPage({super.key});
+  const LoginPage({super.key, required this.onTap});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  TextEditingController emailController = TextEditingController();
+
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +53,10 @@ class LoginPage extends StatelessWidget {
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontSize: 16)),
               SizedBox(
-                width: 10,
+                width: 20,
               ),
               GestureDetector(
+                  onTap: widget.onTap,
                   child: Text('Register here',
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.inversePrimary,
