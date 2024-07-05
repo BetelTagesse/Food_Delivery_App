@@ -18,6 +18,12 @@ class _SettingsPageState extends State<SettingsPage> {
           children: [
             Row(
               children: [
+                Text(
+                  'Dark Mode',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
                 CupertinoSwitch(value: false, onChanged: (value) {}),
               ],
             )
