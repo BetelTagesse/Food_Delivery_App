@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
             MyDrawerTile(
               text: "H O M E",
               icon: Icons.home,
-              onTap: () {},
+              onTap: () => Navigator.pop(context),
             ),
             Spacer(),
             MyDrawerTile(
