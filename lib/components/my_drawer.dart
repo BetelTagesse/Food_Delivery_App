@@ -21,15 +21,20 @@ class MyDrawer extends StatelessWidget {
               child: Divider(color: Theme.of(context).colorScheme.secondary),
             ),
             MyDrawerTile(
-              text: "S E T T I N G",
-              icon: Icons.settings,
-              onTap: () {},
-            ),
-            MyDrawerTile(
               text: "H O M E",
               icon: Icons.home,
               onTap: () => Navigator.pop(context),
             ),
+            MyDrawerTile(
+                text: "S E T T I N G",
+                icon: Icons.settings,
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SettingsPage()));
+                }),
             Spacer(),
             MyDrawerTile(
               text: "L O G O U T",
