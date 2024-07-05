@@ -16,16 +16,20 @@ class _SettingsPageState extends State<SettingsPage> {
         backgroundColor: Theme.of(context).colorScheme.background,
         body: Column(
           children: [
-            Row(
-              children: [
-                Text(
-                  'Dark Mode',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.inversePrimary),
-                ),
-                CupertinoSwitch(value: false, onChanged: (value) {}),
-              ],
+            Container(
+              decoration:
+                  BoxDecoration(color: Theme.of(context).colorScheme.secondary),
+              child: Row(
+                children: [
+                  Text(
+                    'Dark Mode',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.inversePrimary),
+                  ),
+                  CupertinoSwitch(value: false, onChanged: (value) {}),
+                ],
+              ),
             )
           ],
         ));
