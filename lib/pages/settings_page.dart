@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -11,7 +12,16 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Setting')),
-    );
+        appBar: AppBar(title: Text('Settings')),
+        backgroundColor: Theme.of(context).colorScheme.background,
+        body: Column(
+          children: [
+            Row(
+              children: [
+                CupertinoSwitch(value: false, onChanged: (value) {}),
+              ],
+            )
+          ],
+        ));
   }
 }
