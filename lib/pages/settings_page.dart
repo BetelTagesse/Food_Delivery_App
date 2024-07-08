@@ -26,6 +26,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(12)),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Dark Mode',
