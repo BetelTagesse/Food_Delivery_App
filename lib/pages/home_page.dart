@@ -20,7 +20,10 @@ class _HomePageState extends State<HomePage> {
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             MySliverAppbar(
               child: Column(
-                children: [Text("LOOL")],
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("LOOL"),
+                ],
               ),
               title: Text('Title'),
             ),
