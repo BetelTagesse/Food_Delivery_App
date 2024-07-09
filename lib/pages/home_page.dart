@@ -7,10 +7,10 @@ class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePAgeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePAgeState extends State<HomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _HomePAgeState extends State<HomePage> {
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             MySliverAppbar(
               child: Text('hello'),
-              title: Text('Tutle'),
+              title: Text('Title'),
             ),
           ],
           body: Container(
