@@ -14,7 +14,6 @@ class _HomePAgeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Home')),
         backgroundColor: Theme.of(context).colorScheme.background,
         drawer: MyDrawer(),
         body: NestedScrollView(

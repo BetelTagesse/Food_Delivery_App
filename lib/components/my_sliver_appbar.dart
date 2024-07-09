@@ -9,9 +9,20 @@ class MySliverAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      title: title,
-      flexibleSpace: FlexibleSpaceBar(),
-    );
+        expandedHeight: 340,
+        collapsedHeight: 120,
+        floating: false,
+        pinned: true,
+        actions: [
+          IconButton(
+            onPressed: () => {},
+            icon: Icon(Icons.shopping_cart),
+          )
+        ],
+        backgroundColor: Theme.of(context).colorScheme.background,
+        title: title,
+        flexibleSpace: FlexibleSpaceBar(
+          background: child,
+        ));
   }
 }
