@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:food_delivery_app/components/my_drawer.dart';
 import 'package:food_delivery_app/components/my_sliver_appbar.dart';
 
+import '../components/my_current_location.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -27,6 +29,7 @@ class _HomePageState extends State<HomePage> {
                     endIndent: 25,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
+                  MyCurrentLocation(),
                 ],
               ),
               title: Text('Title'),
