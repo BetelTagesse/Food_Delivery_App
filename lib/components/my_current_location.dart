@@ -43,6 +43,9 @@ void openLocationSearchBox(BuildContext context) {
         title: Text('Your location'),
         content: TextField(
           decoration: const InputDecoration(hintText: 'Search address..'),
-        )),
+        ),
+        actions: [
+          MaterialButton(onPressed: () => Navigator.pop(context)),
+        ]),
   );
 }
