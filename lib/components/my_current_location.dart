@@ -45,7 +45,10 @@ void openLocationSearchBox(BuildContext context) {
           decoration: const InputDecoration(hintText: 'Search address..'),
         ),
         actions: [
-          MaterialButton(onPressed: () => Navigator.pop(context)),
+          MaterialButton(
+              onPressed: () => Navigator.pop(context), child: Text('Cancel')),
+          MaterialButton(
+              onPressed: () => Navigator.pop(context), child: Text('Save')),
         ]),
   );
 }
