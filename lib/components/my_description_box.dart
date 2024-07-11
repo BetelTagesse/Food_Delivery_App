@@ -12,6 +12,13 @@ class MyDescriptionBox extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
         ),
       ),
+      child: Row(
+        children: [
+          Column(
+            children: [Text()],
+          )
+        ],
+      ),
     );
   }
 }
