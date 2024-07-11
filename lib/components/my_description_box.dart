@@ -15,7 +15,10 @@ class MyDescriptionBox extends StatelessWidget {
       child: Row(
         children: [
           Column(
-            children: [Text()],
+            children: [Text('\$2.99'), Text('Delivery Fee')],
+          ),
+          Column(
+            children: [Text('10-25 min'), Text('Delivery time')],
           )
         ],
       ),

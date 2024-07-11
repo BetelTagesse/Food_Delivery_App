@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:food_delivery_app/components/my_description_box.dart';
 import 'package:food_delivery_app/components/my_drawer.dart';
 import 'package:food_delivery_app/components/my_sliver_appbar.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
         body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             MySliverAppbar(
+              title: Text('Title'),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -29,10 +31,10 @@ class _HomePageState extends State<HomePage> {
                     endIndent: 25,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
-                  MyCurrentLocation(),
+                  const MyCurrentLocation(),
+                  const MyDescriptionBox(),
                 ],
               ),
-              title: Text('Title'),
             ),
           ],
           body: Container(
