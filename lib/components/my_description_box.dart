@@ -7,12 +7,14 @@ class MyDescriptionBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(25),
       decoration: BoxDecoration(
         border: Border.all(
           color: Theme.of(context).colorScheme.secondary,
         ),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             children: [Text('\$2.99'), Text('Delivery Fee')],
