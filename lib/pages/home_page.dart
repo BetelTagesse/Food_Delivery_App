@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage>
   void initState() {
     super.initState();
 
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -35,31 +35,36 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        drawer: MyDrawer(),
-        body: NestedScrollView(
+      backgroundColor: Theme.of(context).colorScheme.background,
+      drawer: MyDrawer(),
+      body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            MySliverAppbar(
-              title: MyTabbar(
-                tabController: _tabController,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Divider(
-                    indent: 25,
-                    endIndent: 25,
-                    color: Theme.of(context).colorScheme.secondary,
+                MySliverAppbar(
+                  title: MyTabbar(
+                    tabController: _tabController,
                   ),
-                  const MyCurrentLocation(),
-                  const MyDescriptionBox(),
-                ],
-              ),
-            ),
-          ],
-          body: Container(
-            color: Colors.amber,
-          ),
-        ));
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Divider(
+                        indent: 25,
+                        endIndent: 25,
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      const MyCurrentLocation(),
+                      const MyDescriptionBox(),
+                    ],
+                  ),
+                ),
+              ],
+          body: TabBarView(
+            controller: _tabController,
+            children: [
+              Text('Hello'),
+              Text('Hello'),
+              Text('Hello'),
+            ],
+          )),
+    );
   }
 }
