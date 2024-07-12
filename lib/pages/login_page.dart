@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
             hintText: 'Password',
           ),
           SizedBox(height: 20),
-          MyButton(onTap: login, text: 'Sign in'),
+          MyButton(onTap: login, text: 'Login'),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
