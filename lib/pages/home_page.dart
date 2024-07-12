@@ -64,8 +64,14 @@ class _HomePageState extends State<HomePage>
                 itemCount: 5,
                 itemBuilder: (context, index) => Text('hello'),
               ),
-              Text('Hello'),
-              Text('Hello'),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => Text('hello'),
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => Text('hello'),
+              ),
             ],
           )),
     );
