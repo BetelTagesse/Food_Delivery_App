@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage>
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             MySliverAppbar(
               title: MyTabbar(
-                tabController: null,
+                tabController: _tabController,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
