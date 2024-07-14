@@ -6,9 +6,9 @@ class Restaurant {
         description:
             'A juicy beef patty with melted cheese, lettuce, tomato and hins of onion and pickle .',
         imagePath: 'lib/images/burgers/cheese_burger.png',
-        price: price,
-        category: category,
+        price: 0.99,
+        category: FoodCategory.burgers,
         name: 'classic cheeseburger',
-        availableAddons: availableAddons)
+        availableAddons: [Addon(name: 'Extra cheese', price: 0.99)]),
   ];
 }
