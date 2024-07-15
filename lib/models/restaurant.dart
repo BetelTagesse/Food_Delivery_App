@@ -52,5 +52,17 @@ class Restaurant {
         Addon(name: 'Lemon Slice', price: 0.20),
       ],
     ),
+    Food(
+      description:
+          'A rich and creamy slice of chocolate cake with layers of ganache.',
+      imagePath: 'lib/images/desserts/chocolate_cake.png',
+      price: 3.99,
+      category: FoodCategory.desserts,
+      name: 'Chocolate Cake',
+      availableAddons: [
+        Addon(name: 'Whipped Cream', price: 0.50),
+        Addon(name: 'Extra Chocolate Syrup', price: 0.99),
+      ],
+    ),
   ];
 }
