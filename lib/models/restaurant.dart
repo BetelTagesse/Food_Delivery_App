@@ -41,5 +41,16 @@ class Restaurant {
         Addon(name: 'Extra Dressing', price: 0.99),
       ],
     ),
+    Food(
+      description: 'A refreshing cold beverage to complement your meal.',
+      imagePath: 'lib/images/drinks/cola.png',
+      price: 1.49,
+      category: FoodCategory.drinks,
+      name: 'Coca-Cola',
+      availableAddons: [
+        Addon(name: 'Ice', price: 0.10),
+        Addon(name: 'Lemon Slice', price: 0.20),
+      ],
+    ),
   ];
 }
