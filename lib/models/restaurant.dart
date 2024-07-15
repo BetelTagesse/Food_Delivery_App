@@ -28,5 +28,18 @@ class Restaurant {
         Addon(name: 'Ketchup', price: 0.49),
       ],
     ),
+    Food(
+      description:
+          'Fresh garden salad with lettuce, tomatoes, cucumbers, and a light vinaigrette.',
+      imagePath: 'lib/images/salads/garden_salad.png',
+      price: 4.99,
+      category: FoodCategory.salads,
+      name: 'Garden Salad',
+      availableAddons: [
+        Addon(name: 'Grilled Chicken', price: 2.99),
+        Addon(name: 'Avocado', price: 1.49),
+        Addon(name: 'Extra Dressing', price: 0.99),
+      ],
+    ),
   ];
 }
