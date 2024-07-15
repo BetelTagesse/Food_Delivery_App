@@ -15,6 +15,7 @@ class Restaurant {
           Addon(name: 'Bacon', price: 1.99),
           Addon(name: 'mayonnaise', price: 2.99)
         ]),
+    //sides
     Food(
       description:
           'Crispy golden fries with a perfect balance of salt and crunch.',
@@ -30,6 +31,56 @@ class Restaurant {
     ),
     Food(
       description:
+          'Crispy golden fries with a perfect balance of salt and crunch.',
+      imagePath: 'lib/images/sides/fries.png',
+      price: 1.99,
+      category: FoodCategory.sides,
+      name: 'French Fries',
+      availableAddons: [
+        Addon(name: 'Extra Salt', price: 0.29),
+        Addon(name: 'Cheese Dip', price: 0.99),
+        Addon(name: 'Ketchup', price: 0.49),
+      ],
+    ),
+    Food(
+      description:
+          'Crunchy onion rings coated in a golden batter, fried to perfection.',
+      imagePath: 'lib/images/sides/onion_rings.png',
+      price: 2.99,
+      category: FoodCategory.sides,
+      name: 'Onion Rings',
+      availableAddons: [
+        Addon(name: 'BBQ Sauce', price: 0.99),
+        Addon(name: 'Ranch Dip', price: 0.99),
+      ],
+    ),
+    Food(
+      description: 'Sweet and crispy sweet potato fries, lightly salted.',
+      imagePath: 'lib/images/sides/sweet_potato_fries.png',
+      price: 2.49,
+      category: FoodCategory.sides,
+      name: 'Sweet Potato Fries',
+      availableAddons: [
+        Addon(name: 'Honey Mustard Dip', price: 0.99),
+        Addon(name: 'Spicy Mayo', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'Cheese-filled mozzarella sticks fried until crispy and golden.',
+      imagePath: 'lib/images/sides/mozzarella_sticks.png',
+      price: 3.49,
+      category: FoodCategory.sides,
+      name: 'Mozzarella Sticks',
+      availableAddons: [
+        Addon(name: 'Marinara Sauce', price: 0.99),
+        Addon(name: 'Garlic Aioli', price: 0.99),
+      ],
+    ),
+
+    //salads
+    Food(
+      description:
           'Fresh garden salad with lettuce, tomatoes, cucumbers, and a light vinaigrette.',
       imagePath: 'lib/images/salads/garden_salad.png',
       price: 4.99,
@@ -42,6 +93,56 @@ class Restaurant {
       ],
     ),
     Food(
+      description:
+          'Crisp romaine lettuce, parmesan cheese, croutons, and Caesar dressing.',
+      imagePath: 'lib/images/salads/caesar_salad.png',
+      price: 5.99,
+      category: FoodCategory.salads,
+      name: 'Caesar Salad',
+      availableAddons: [
+        Addon(name: 'Grilled Chicken', price: 2.99),
+        Addon(name: 'Extra Croutons', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'A fresh mix of cucumbers, tomatoes, olives, and feta cheese with olive oil dressing.',
+      imagePath: 'lib/images/salads/greek_salad.png',
+      price: 6.49,
+      category: FoodCategory.salads,
+      name: 'Greek Salad',
+      availableAddons: [
+        Addon(name: 'Grilled Shrimp', price: 3.49),
+        Addon(name: 'Extra Feta', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'A hearty salad with bacon, avocado, eggs, tomatoes, and blue cheese crumbles.',
+      imagePath: 'lib/images/salads/cobb_salad.png',
+      price: 7.99,
+      category: FoodCategory.salads,
+      name: 'Cobb Salad',
+      availableAddons: [
+        Addon(name: 'Grilled Chicken', price: 2.99),
+        Addon(name: 'Extra Bacon', price: 1.49),
+      ],
+    ),
+    Food(
+      description:
+          'A light and healthy salad with quinoa, avocado, cherry tomatoes, and a lemon vinaigrette.',
+      imagePath: 'lib/images/salads/quinoa_salad.png',
+      price: 6.99,
+      category: FoodCategory.salads,
+      name: 'Quinoa Salad',
+      availableAddons: [
+        Addon(name: 'Chia Seeds', price: 0.99),
+        Addon(name: 'Grilled Tofu', price: 2.49),
+      ],
+    ),
+
+    //drinks
+    Food(
       description: 'A refreshing cold beverage to complement your meal.',
       imagePath: 'lib/images/drinks/cola.png',
       price: 1.49,
@@ -52,6 +153,44 @@ class Restaurant {
         Addon(name: 'Lemon Slice', price: 0.20),
       ],
     ),
+
+    Food(
+      description:
+          'Freshly brewed iced tea, served chilled with a hint of lemon.',
+      imagePath: 'lib/images/drinks/iced_tea.png',
+      price: 1.99,
+      category: FoodCategory.drinks,
+      name: 'Iced Tea',
+      availableAddons: [
+        Addon(name: 'Extra Lemon', price: 0.20),
+        Addon(name: 'Honey', price: 0.50),
+      ],
+    ),
+    Food(
+      description:
+          'Freshly squeezed lemons with a hint of sugar, served over ice.',
+      imagePath: 'lib/images/drinks/lemonade.png',
+      price: 2.49,
+      category: FoodCategory.drinks,
+      name: 'Lemonade',
+      availableAddons: [
+        Addon(name: 'Mint Leaves', price: 0.30),
+        Addon(name: 'Strawberries', price: 0.99),
+      ],
+    ),
+    Food(
+      description: 'A healthy blend of mixed berries, bananas, and yogurt.',
+      imagePath: 'lib/images/drinks/smoothie.png',
+      price: 3.99,
+      category: FoodCategory.drinks,
+      name: 'Mixed Berry Smoothie',
+      availableAddons: [
+        Addon(name: 'Protein Powder', price: 1.99),
+        Addon(name: 'Chia Seeds', price: 0.99),
+      ],
+    ),
+
+    //desert
     Food(
       description:
           'A rich and creamy slice of chocolate cake with layers of ganache.',
@@ -62,6 +201,42 @@ class Restaurant {
       availableAddons: [
         Addon(name: 'Whipped Cream', price: 0.50),
         Addon(name: 'Extra Chocolate Syrup', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'A slice of creamy New York-style cheesecake with a graham cracker crust.',
+      imagePath: 'lib/images/desserts/cheesecake.png',
+      price: 4.49,
+      category: FoodCategory.desserts,
+      name: 'Cheesecake',
+      availableAddons: [
+        Addon(name: 'Strawberry Topping', price: 0.99),
+        Addon(name: 'Caramel Sauce', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'Warm chocolate brownie topped with vanilla ice cream and chocolate drizzle.',
+      imagePath: 'lib/images/desserts/brownie_sundae.png',
+      price: 5.49,
+      category: FoodCategory.desserts,
+      name: 'Brownie Sundae',
+      availableAddons: [
+        Addon(name: 'Extra Ice Cream Scoop', price: 1.49),
+        Addon(name: 'Nuts', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'Traditional apple pie with a flaky crust and cinnamon-spiced apples.',
+      imagePath: 'lib/images/desserts/apple_pie.png',
+      price: 3.49,
+      category: FoodCategory.desserts,
+      name: 'Apple Pie',
+      availableAddons: [
+        Addon(name: 'Vanilla Ice Cream', price: 1.49),
+        Addon(name: 'Caramel Drizzle', price: 0.99),
       ],
     ),
   ];
