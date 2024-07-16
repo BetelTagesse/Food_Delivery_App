@@ -80,17 +80,17 @@ class Restaurant {
     ),
     Food(
       description:
-          'Crispy golden fries with a perfect balance of salt and crunch.',
-      imagePath: 'lib/images/sides/fries.png',
-      price: 1.99,
+          'Crispy garlic bread with a golden crust and a buttery garlic topping.',
+      imagePath: 'lib/images/sides/garlic_bread.png',
+      price: 2.49,
       category: FoodCategory.sides,
-      name: 'French Fries',
+      name: 'Garlic Bread',
       availableAddons: [
-        Addon(name: 'Extra Salt', price: 0.29),
-        Addon(name: 'Cheese Dip', price: 0.99),
-        Addon(name: 'Ketchup', price: 0.49),
+        Addon(name: 'Extra Garlic Butter', price: 0.99),
+        Addon(name: 'Cheese Topping', price: 1.29),
       ],
     ),
+
     Food(
       description:
           'Crunchy onion rings coated in a golden batter, fried to perfection.',
