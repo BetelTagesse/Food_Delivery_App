@@ -239,5 +239,17 @@ class Restaurant {
         Addon(name: 'Caramel Drizzle', price: 0.99),
       ],
     ),
+    Food(
+      description:
+          'A classic ice cream sundae topped with chocolate sauce, nuts, and a cherry.',
+      imagePath: 'lib/images/desserts/ice_cream_sundae.png',
+      price: 4.99,
+      category: FoodCategory.desserts,
+      name: 'Ice Cream Sundae',
+      availableAddons: [
+        Addon(name: 'Extra Nuts', price: 0.50),
+        Addon(name: 'Sprinkles', price: 0.29),
+      ],
+    ),
   ];
 }
