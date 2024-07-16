@@ -15,6 +15,55 @@ class Restaurant {
           Addon(name: 'Bacon', price: 1.99),
           Addon(name: 'mayonnaise', price: 2.99)
         ]),
+    Food(
+      description:
+          'A juicy beef patty with melted cheese, crispy bacon, lettuce, and tomato.',
+      imagePath: 'lib/images/burgers/bacon_cheeseburger.png',
+      price: 5.99,
+      category: FoodCategory.burgers,
+      name: 'Bacon Cheeseburger',
+      availableAddons: [
+        Addon(name: 'Extra Bacon', price: 1.49),
+        Addon(name: 'Avocado', price: 1.99),
+      ],
+    ),
+    Food(
+      description:
+          'A healthy patty made from vegetables, topped with lettuce, tomato, and avocado.',
+      imagePath: 'lib/images/burgers/veggie_burger.png',
+      price: 4.99,
+      category: FoodCategory.burgers,
+      name: 'Veggie Burger',
+      availableAddons: [
+        Addon(name: 'Vegan Cheese', price: 0.99),
+        Addon(name: 'Grilled Mushrooms', price: 0.99),
+      ],
+    ),
+    Food(
+      description:
+          'A savory burger with BBQ sauce, cheddar cheese, and crispy onion rings.',
+      imagePath: 'lib/images/burgers/bbq_burger.png',
+      price: 6.49,
+      category: FoodCategory.burgers,
+      name: 'BBQ Burger',
+      availableAddons: [
+        Addon(name: 'Extra BBQ Sauce', price: 0.49),
+        Addon(name: 'Pickles', price: 0.29),
+      ],
+    ),
+    Food(
+      description:
+          'Two juicy beef patties with double melted cheese, lettuce, and tomato.',
+      imagePath: 'lib/images/burgers/double_cheeseburger.png',
+      price: 7.99,
+      category: FoodCategory.burgers,
+      name: 'Double Cheeseburger',
+      availableAddons: [
+        Addon(name: 'Extra Patty', price: 2.49),
+        Addon(name: 'Extra Cheese', price: 0.99),
+      ],
+    ),
+
     //sides
     Food(
       description:
