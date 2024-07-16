@@ -189,6 +189,18 @@ class Restaurant {
         Addon(name: 'Chia Seeds', price: 0.99),
       ],
     ),
+    Food(
+      description:
+          'A creamy vanilla milkshake topped with whipped cream and a cherry.',
+      imagePath: 'lib/images/drinks/milkshake.png',
+      price: 3.99,
+      category: FoodCategory.drinks,
+      name: 'Vanilla Milkshake',
+      availableAddons: [
+        Addon(name: 'Extra Whipped Cream', price: 0.50),
+        Addon(name: 'Chocolate Syrup', price: 0.99),
+      ],
+    ),
 
     //desert
     Food(
