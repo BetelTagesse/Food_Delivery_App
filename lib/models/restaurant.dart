@@ -313,4 +313,21 @@ class Restaurant {
       ],
     ),
   ];
+
+//Getters
+  List<Food> get menu => _menu;
+
+//OPERATIONS
+
+//add to the cart
+
+//remove from cart
+
+//get total price
+
+//get total number of items in cart
+
+//clear cart
+
+//Helpers
 }
