@@ -330,4 +330,8 @@ class Restaurant {
 //clear cart
 
 //Helpers
+
+//Generate a receipt
+
+//
 }
