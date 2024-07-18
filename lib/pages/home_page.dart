@@ -5,6 +5,8 @@ import 'package:food_delivery_app/components/my_description_box.dart';
 import 'package:food_delivery_app/components/my_drawer.dart';
 import 'package:food_delivery_app/components/my_sliver_appbar.dart';
 import 'package:food_delivery_app/models/food.dart';
+import 'package:food_delivery_app/models/restaurant.dart';
+import 'package:provider/provider.dart';
 
 import '../components/my_current_location.dart';
 import '../components/my_tabbar.dart';
@@ -42,13 +44,17 @@ class _HomePageState extends State<HomePage>
   }
 
   //return list of foods in given  category
-  List<Widget> getFoodInThisCategory(List<Food> fullMenu){
-    return FoodCategory.values.map((category){
+  List<Widget> getFoodInThisCategory(List<Food> fullMenu) {
+    return FoodCategory.values.map((category) {
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
-      return ListView.builder(itemCount: categoryMenu.length,physics:const NeverScrollableScrollPhysics(),itemBuilder: (context,index){
-        return ListTile(title:Text(categoryMenu[index].name),);
-
-      })
+      return ListView.builder(
+          itemCount: categoryMenu.length,
+          physics: const NeverScrollableScrollPhysics(),
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(categoryMenu[index].name),
+            );
+          });
     }).toList();
   }
 
@@ -58,50 +64,32 @@ class _HomePageState extends State<HomePage>
       backgroundColor: Theme.of(context).colorScheme.background,
       drawer: MyDrawer(),
       body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) => [
-                MySliverAppbar(
-                  title: MyTabbar(
-                    tabController: _tabController,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Divider(
-                        indent: 25,
-                        endIndent: 25,
-                        color: Theme.of(context).colorScheme.secondary,
-                      ),
-                      const MyCurrentLocation(),
-                      const MyDescriptionBox(),
-                    ],
-                  ),
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          MySliverAppbar(
+            title: MyTabbar(
+              tabController: _tabController,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Divider(
+                  indent: 25,
+                  endIndent: 25,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
+                const MyCurrentLocation(),
+                const MyDescriptionBox(),
               ],
-          body: TabBarView(
+            ),
+          ),
+        ],
+        body: Consumer<Restaurant>(
+          builder: (context, restaurant, child) => TabBarView(
             controller: _tabController,
-            children: [
-              ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) => Text('first item'),
-              ),
-              ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) => Text('Second item'),
-              ),
-              ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) => Text('Third item'),
-              ),
-              ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) => Text('Fourth item'),
-              ),
-              ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) => Text('Fifth item'),
-              ),
-            ],
-          )),
+            children: getFoodInThisCategory(restaurant.menu),
+          ),
+        ),
+      ),
     );
   }
 }
