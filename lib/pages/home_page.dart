@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:food_delivery_app/components/my_description_box.dart';
@@ -32,6 +33,23 @@ class _HomePageState extends State<HomePage>
     _tabController.dispose();
 
     super.dispose();
+  }
+
+  //sort out and return list of foods  based on category
+
+  List<Food> _filterMenuByCategory(FoodCategory category, List<Food> fullMenu) {
+    return fullMenu.where((food) => food.category == category).toList();
+  }
+
+  //return list of foods in given  category
+  List<Widget> getFoodInThisCategory(List<Food> fullMenu){
+    return FoodCategory.values.map((category){
+      List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
+      return ListView.builder(itemCount: categoryMenu.length,physics:const NeverScrollableScrollPhysics(),itemBuilder: (context,index){
+        return ListTile(title:Text(categoryMenu[index].name),);
+
+      })
+    }).toList();
   }
 
   @override
