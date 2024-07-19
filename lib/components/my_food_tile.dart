@@ -21,7 +21,7 @@ class MyFoodTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(food.name),
-                      Text(food.price.toString()),
+                      Text('${food.price}'),
                       Text(food.description),
                     ],
                   ),

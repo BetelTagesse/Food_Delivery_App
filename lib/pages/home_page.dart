@@ -49,6 +49,7 @@ class _HomePageState extends State<HomePage>
     return FoodCategory.values.map((category) {
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
       return ListView.builder(
+          padding: EdgeInsets.all(0),
           itemCount: categoryMenu.length,
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
