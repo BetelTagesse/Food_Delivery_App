@@ -14,7 +14,14 @@ class MyFoodTile extends StatelessWidget {
           onTap: onTap,
           child: Row(
             children: [
-              Column(),
+              Column(
+                children: [
+                               Text(food.name),
+                               Text(food.price.toString())
+                               Text(),
+
+                ],
+              ),
             ],
           ),
         ),
