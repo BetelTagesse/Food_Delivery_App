@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage>
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(categoryMenu[index].name),
+              title: Text(categoryMenu[index].imagePath),
             );
           });
     }).toList();
