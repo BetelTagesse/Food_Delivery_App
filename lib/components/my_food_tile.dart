@@ -38,14 +38,16 @@ class MyFoodTile extends StatelessWidget {
                 ),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.asset(
-                    food.imagePath,
-                    height: 120,
-                    width: 120,
-                  ),
+                  child: Image.asset(food.imagePath,
+                      height: 120, width: 120, fit: BoxFit.cover),
                 ),
               ],
             ),
+          ),
+          Divider(
+            color: Theme.of(context).colorScheme.tertiary,
+            indent: 25,
+            endIndent: 25,
           ),
         ],
       ),
