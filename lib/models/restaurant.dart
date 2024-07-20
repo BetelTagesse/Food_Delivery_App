@@ -5,17 +5,18 @@ class Restaurant extends ChangeNotifier {
   final List<Food> _menu = [
     //Burgers
     Food(
-        description:
-            'A juicy beef patty with melted cheese, lettuce, tomato and hins of onion and pickle .',
-        imagePath: 'lib/images/burgers/cheese_burger.png',
-        price: 0.99,
-        category: FoodCategory.burgers,
-        name: 'classic cheeseburger',
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacon', price: 1.99),
-          Addon(name: 'mayonnaise', price: 2.99)
-        ]),
+      description:
+          'A juicy beef patty with melted cheese, lettuce, tomato and hins of onion and pickle .',
+      imagePath: 'lib/images/burgers/cheese_burger.png',
+      price: 0.99,
+      category: FoodCategory.burgers,
+      name: 'classic cheeseburger',
+      availableAddons: [
+        Addon(name: 'Extra cheese', price: 0.99),
+        Addon(name: 'Bacon', price: 1.99),
+        Addon(name: 'mayonnaise', price: 2.99)
+      ],
+    ),
     Food(
       description:
           'A juicy beef patty with melted cheese, crispy bacon, lettuce, and tomato.',

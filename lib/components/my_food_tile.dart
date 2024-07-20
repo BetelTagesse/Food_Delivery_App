@@ -9,7 +9,7 @@ class MyFoodTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.all(15),
       child: Column(
         children: [
           GestureDetector(
@@ -21,15 +21,28 @@ class MyFoodTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(food.name),
-                      Text('${food.price}'),
-                      Text(food.description),
+                      Text(
+                        '\$' + food.price.toString(),
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        food.description,
+                        style: TextStyle(
+                            color:
+                                Theme.of(context).colorScheme.inversePrimary),
+                      ),
                     ],
                   ),
                 ),
-                Image.asset(
-                  food.imagePath,
-                  height: 120,
-                  width: 120,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    food.imagePath,
+                    height: 120,
+                    width: 120,
+                  ),
                 ),
               ],
             ),
