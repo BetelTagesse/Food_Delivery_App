@@ -21,6 +21,7 @@ class _FoodPageState extends State<FoodPage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ClipRRect(
                 child: Image.asset(
@@ -42,19 +43,33 @@ class _FoodPageState extends State<FoodPage> {
                     fontSize: 16, color: Theme.of(context).colorScheme.primary),
               ),
               SizedBox(height: 10),
-              ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: widget.food.availableAddons.length,
-                  itemBuilder: (context, index) {
-                    Addon addon = widget.food.availableAddons[index];
+              Text(
+                'Addons',
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
+              // SizedBox(height: 10),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(2),
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: widget.food.availableAddons.length,
+                    itemBuilder: (context, index) {
+                      Addon addon = widget.food.availableAddons[index];
 
-                    return CheckboxListTile(
-                        title: Text(addon.name),
-                        subtitle: Text(addon.price.toString()),
-                        value: false,
-                        onChanged: (value) {});
-                  }),
+                      return CheckboxListTile(
+                          title: Text(addon.name),
+                          subtitle: Text(addon.price.toString()),
+                          value: false,
+                          onChanged: (value) {});
+                    }),
+              ),
             ],
           ),
         ),
