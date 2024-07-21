@@ -14,7 +14,7 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -23,8 +23,8 @@ class _FoodPageState extends State<FoodPage> {
             ClipRRect(
               child: Image.asset(
                 widget.food.imagePath,
-                width: screenWidth * 0.5,
-                height: screenWidth * 0.5,
+                width: double.infinity,
+                height: screenHeight * 0.5,
                 fit: BoxFit.cover,
               ),
             ),
