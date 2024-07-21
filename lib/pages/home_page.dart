@@ -7,6 +7,7 @@ import 'package:food_delivery_app/components/my_food_tile.dart';
 import 'package:food_delivery_app/components/my_sliver_appbar.dart';
 import 'package:food_delivery_app/models/food.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
+import 'package:food_delivery_app/pages/food_page.dart';
 import 'package:provider/provider.dart';
 
 import '../components/my_current_location.dart';
@@ -54,7 +55,12 @@ class _HomePageState extends State<HomePage>
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             final food = categoryMenu[index];
-            return MyFoodTile(food: food, onTap: () {});
+            return MyFoodTile(
+                food: food,
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FoodPage(food: food))));
           });
     }).toList();
   }

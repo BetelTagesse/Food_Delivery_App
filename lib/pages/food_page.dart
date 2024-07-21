@@ -4,7 +4,7 @@ import 'package:food_delivery_app/models/food.dart';
 class FoodPage extends StatefulWidget {
   final Food food;
 
-  const FoodPage({super.key,  required this.food});
+  const FoodPage({super.key, required this.food});
 
   @override
   State<FoodPage> createState() => _FoodPageState();
@@ -13,13 +13,23 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(widget.food.imagePath),
-        Text(widget.food.name),
-        Text(widget.food.description),
-        CheckboxListTile(value: false, onChanged: (value){});
-      ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(widget.food.imagePath, height: 200),
+            Text(widget.food.name),
+            Text(widget.food.description),
+            ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: widget.food.availableAddons.length,
+                itemBuilder: (context, index) {
+                  return CheckboxListTile(value: false, onChanged: (value) {});
+                }),
+          ],
+        ),
+      ),
     );
   }
 }
