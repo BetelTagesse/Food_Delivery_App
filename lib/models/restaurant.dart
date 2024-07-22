@@ -10,7 +10,7 @@ class Restaurant extends ChangeNotifier {
       imagePath: 'lib/images/burgers/cheese_burger.png',
       price: 0.99,
       category: FoodCategory.burgers,
-      name: 'classic cheeseburger',
+      name: 'Classic Cheese Burger',
       availableAddons: [
         Addon(name: 'Extra cheese', price: 0.99),
         Addon(name: 'Bacon', price: 1.99),
