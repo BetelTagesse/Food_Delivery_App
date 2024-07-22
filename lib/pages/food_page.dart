@@ -76,7 +76,10 @@ class _FoodPageState extends State<FoodPage> {
                               onChanged: (value) {});
                         }),
                   ),
-                  MyButton(onTap: onTap, text: text)
+                  SizedBox(
+                    height: 15,
+                  ),
+                  MyButton(onTap: () {}, text: 'Add To  Cart')
                 ],
               ),
             ),
