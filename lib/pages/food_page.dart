@@ -18,6 +18,7 @@ class _FoodPageState extends State<FoodPage> {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -47,18 +48,20 @@ class _FoodPageState extends State<FoodPage> {
                         color: Theme.of(context).colorScheme.primary),
                   ),
                   SizedBox(height: 10),
+                  Divider(
+                    color: Theme.of(context).colorScheme.secondary,
+                    // indent: 5,
+                    // endIndent: 5,
+                  ),
+                  SizedBox(height: 8),
                   Text(
-                    'Addons',
+                    'Add-ons',
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
-                  Divider(
-                    color: Theme.of(context).colorScheme.secondary,
-                    endIndent: 25,
-                  ),
-                  // SizedBox(height: 10),
+                  SizedBox(height: 8),
                   Container(
                     decoration: BoxDecoration(
                       border: Border.all(
