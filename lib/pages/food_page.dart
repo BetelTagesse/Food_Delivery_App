@@ -56,6 +56,7 @@ class _FoodPageState extends State<FoodPage> {
                   ),
                   Divider(
                     color: Theme.of(context).colorScheme.secondary,
+                    endIndent: 25,
                   ),
                   // SizedBox(height: 10),
                   Container(
