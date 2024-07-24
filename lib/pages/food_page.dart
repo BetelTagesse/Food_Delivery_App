@@ -71,7 +71,7 @@ class _FoodPageState extends State<FoodPage> {
 
                           return CheckboxListTile(
                               title: Text(addon.name),
-                              subtitle: Text('\$' + addon.price.toString()),
+                              subtitle: Text('\$${addon.price}'),
                               value: false,
                               onChanged: (value) {});
                         }),
