@@ -49,8 +49,9 @@ class _FoodPageState extends State<FoodPage> {
                   Text(
                     widget.food.description,
                     style: TextStyle(
-                        fontSize: 16,
-                        color: Theme.of(context).colorScheme.primary),
+                      fontSize: 16,
+                      // color: Theme.of(context).colorScheme.primary,
+                    ),
                   ),
                   SizedBox(height: 10),
                   Divider(
