@@ -26,7 +26,6 @@ class _FoodPageState extends State<FoodPage> {
     return Stack(
       children: [
         Scaffold(
-          appBar: AppBar(),
           body: SingleChildScrollView(
             child: Column(
               children: [
