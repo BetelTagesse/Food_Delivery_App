@@ -116,13 +116,20 @@ class _FoodPageState extends State<FoodPage> {
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.inversePrimary,
-              borderRadius: BorderRadius.circular(5)),
-          child: IconButton(
-            icon: Icon(Icons.arrow_back_ios_new_rounded),
-            onPressed: () => Navigator.pop,
+        SafeArea(
+          child: Opacity(
+            opacity: 0.4,
+            child: Container(
+              margin: EdgeInsets.only(left: 25),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                shape: BoxShape.circle,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.arrow_back_ios_new_rounded),
+                onPressed: () => Navigator.pop,
+              ),
+            ),
           ),
         ),
       ],
