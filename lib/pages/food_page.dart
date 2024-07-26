@@ -96,8 +96,12 @@ class _FoodPageState extends State<FoodPage> {
                                         .colorScheme
                                         .inversePrimary,
                                   )),
-                              value: false,
-                              onChanged: (value) {});
+                              value: true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  widget.selectedAddons[addon] = value!;
+                                });
+                              });
                         }),
                   ),
                   SizedBox(
