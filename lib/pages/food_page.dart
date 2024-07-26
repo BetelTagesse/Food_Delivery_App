@@ -117,8 +117,14 @@ class _FoodPageState extends State<FoodPage> {
           ),
         ),
         Container(
-          decoration: BoxDecoration(),
-        )
+          decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.inversePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new_rounded),
+            onPressed: () => Navigator.pop,
+          ),
+        ),
       ],
     );
   }
