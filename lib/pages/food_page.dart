@@ -96,7 +96,7 @@ class _FoodPageState extends State<FoodPage> {
                                         .colorScheme
                                         .inversePrimary,
                                   )),
-                              value: true,
+                              value: widget.selectedAddons[addon],
                               onChanged: (bool? value) {
                                 setState(() {
                                   widget.selectedAddons[addon] = value!;
