@@ -118,7 +118,7 @@ class _FoodPageState extends State<FoodPage> {
         ),
         SafeArea(
           child: Opacity(
-            opacity: 0.4,
+            opacity: 0.6,
             child: Container(
               margin: EdgeInsets.only(left: 25),
               decoration: BoxDecoration(
