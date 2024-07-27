@@ -127,7 +127,7 @@ class _FoodPageState extends State<FoodPage> {
               ),
               child: IconButton(
                 icon: Icon(Icons.arrow_back_ios_new_rounded),
-                onPressed: () => Navigator.pop,
+                onPressed: () => Navigator.pop(context),
               ),
             ),
           ),
