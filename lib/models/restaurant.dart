@@ -323,6 +323,8 @@ class Restaurant extends ChangeNotifier {
 
 //add to the cart
 
+  void addToCart(Food food, List<Addon> selectedAddons) {}
+
 //remove from cart
 
 //get total price
