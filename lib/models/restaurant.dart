@@ -356,6 +356,18 @@ class Restaurant extends ChangeNotifier {
   }
 
 //get total price
+  double getTotalPrice() {
+    double totalPrice = 0;
+    for (CartItem cartItem in _cart) {
+      double itemTotal = cartItem.food.price;
+
+      for (Addon addon in cartItem.selectedAddons) {
+        itemTotal += addon.price;
+      }
+      total += itemTotal * cartItem.quantity;
+    }
+    return total;
+  }
 
 //get total number of items in cart
 
