@@ -357,7 +357,7 @@ class Restaurant extends ChangeNotifier {
 
 //get total price
   double getTotalPrice() {
-    double totalPrice = 0;
+    double total = 0;
     for (CartItem cartItem in _cart) {
       double itemTotal = cartItem.food.price;
 
