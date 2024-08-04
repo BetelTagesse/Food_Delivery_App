@@ -340,9 +340,14 @@ class Restaurant extends ChangeNotifier {
     } else {
       _cart.add(CartItem(food: food, selectedAddons: selectedAddons));
     }
+    notifyListeners();
   }
 
 //remove from cart
+
+  void removeFromCart(CartItem cartItem) {
+    _cart.remove(cartItem);
+  }
 
 //get total price
 
