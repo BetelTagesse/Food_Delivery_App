@@ -350,9 +350,11 @@ class Restaurant extends ChangeNotifier {
     if (cartIndex != -1) {
       if (_cart[cartIndex].quantity > 1) {
         _cart[cartIndex].quantity--;
+      } else {
+        _cart.removeAt(cartIndex);
       }
     }
-    _cart.removeAt(cartIndex);
+    notifyListeners();
   }
 
 //get total price
