@@ -19,6 +19,8 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
+  addToCart(Food food, Map<Addon, bool> selectedAddons) {}
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -108,7 +110,10 @@ class _FoodPageState extends State<FoodPage> {
                       SizedBox(
                         height: 15,
                       ),
-                      MyButton(onTap: () {}, text: 'Add To Cart')
+                      MyButton(
+                          onTap: () =>
+                              addToCart(widget.food, widget.selectedAddons),
+                          text: 'Add To Cart')
                     ],
                   ),
                 ),
