@@ -10,7 +10,9 @@ class CartPage extends StatelessWidget {
     return Consumer<Restaurant>(
       builder: (context, restaurant, child) {
         final userCart = restaurant.cart;
-        return Scaffold();
+        return Scaffold(
+          appBar: AppBar(title: Text('Cart page')),
+        );
       },
     );
   }
