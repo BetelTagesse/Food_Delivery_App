@@ -19,7 +19,14 @@ class CartPage extends StatelessWidget {
             foregroundColor: Theme.of(context).colorScheme.inversePrimary,
           ),
           body: Column(
-            children: [],
+            children: [
+              Expanded(
+                child: ListView.builder(
+                    itemCount: userCart.length,
+                    itemBuilder: (context, index) =>
+                        ListTile(title: Text(userCart[index].food.name))),
+              )
+            ],
           ),
         );
       },
