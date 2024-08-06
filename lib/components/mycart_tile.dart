@@ -20,11 +20,17 @@ class MycartTile extends StatelessWidget {
                 ClipRRect(
                     child: Image.asset(cartItem.food.imagePath,
                         height: 100, width: 100)),
+                SizedBox(
+                  width: 10,
+                ),
                 Column(
                   children: [
-                    Text(cartItem.food.name,
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    Text(
+                      cartItem.food.name,
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    Text('\$${cartItem.food.price}'),
                   ],
                 )
               ],
