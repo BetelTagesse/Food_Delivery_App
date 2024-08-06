@@ -17,7 +17,16 @@ class MycartTile extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.asset(cartItem.food.imagePath, height: 50),
+                ClipRRect(
+                    child: Image.asset(cartItem.food.imagePath,
+                        height: 100, width: 100)),
+                Column(
+                  children: [
+                    Text(cartItem.food.name,
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
+                  ],
+                )
               ],
             )
           ],
