@@ -9,7 +9,7 @@ class MyQuantitySelector extends StatelessWidget {
   const MyQuantitySelector(
       {super.key,
       required this.quantity,
-      this.food,
+      required this.food,
       required this.onIncrement,
       required this.onDecrement});
 
@@ -19,6 +19,7 @@ class MyQuantitySelector extends StatelessWidget {
       decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.background,
           borderRadius: BorderRadius.circular(30)),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
     );
   }
 }
