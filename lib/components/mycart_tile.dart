@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/components/my_quantity_selector.dart';
 import 'package:food_delivery_app/models/cart_item.dart';
 import 'package:provider/provider.dart';
 
@@ -32,7 +33,17 @@ class MycartTile extends StatelessWidget {
                     ),
                     Text('\$${cartItem.food.price}'),
                   ],
-                )
+                ),
+                MyQuantitySelector(
+                    quantity: cartItem.quantity,
+                    food: cartItem.food,
+                    onIncrement: () {
+                      restaurant.addToCart(
+                          cartItem.food, cartItem.selectedAddons);
+                    },
+                    onDecrement: () {
+                      restaurant.removeFromCart(cartItem);
+                    })
               ],
             )
           ],
