@@ -41,6 +41,7 @@ class MycartTile extends StatelessWidget {
                           Text('\$${cartItem.food.price}'),
                         ],
                       ),
+                      Spacer(),
                       MyQuantitySelector(
                           quantity: cartItem.quantity,
                           food: cartItem.food,
