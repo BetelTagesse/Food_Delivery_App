@@ -14,40 +14,44 @@ class MycartTile extends StatelessWidget {
     return Consumer<Restaurant>(
       builder: (context, restaurant, child) {
         return Container(
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                borderRadius: BorderRadius.all(radius)),
             child: Column(
-          children: [
-            Row(
               children: [
-                ClipRRect(
-                    child: Image.asset(cartItem.food.imagePath,
-                        height: 100, width: 100)),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
+                Row(
                   children: [
-                    Text(
-                      cartItem.food.name,
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(cartItem.food.imagePath,
+                            height: 100, width: 100)),
+                    SizedBox(
+                      width: 10,
                     ),
-                    Text('\$${cartItem.food.price}'),
+                    Column(
+                      children: [
+                        Text(
+                          cartItem.food.name,
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        Text('\$${cartItem.food.price}'),
+                      ],
+                    ),
+                    MyQuantitySelector(
+                        quantity: cartItem.quantity,
+                        food: cartItem.food,
+                        onIncrement: () {
+                          restaurant.addToCart(
+                              cartItem.food, cartItem.selectedAddons);
+                        },
+                        onDecrement: () {
+                          restaurant.removeFromCart(cartItem);
+                        })
                   ],
-                ),
-                MyQuantitySelector(
-                    quantity: cartItem.quantity,
-                    food: cartItem.food,
-                    onIncrement: () {
-                      restaurant.addToCart(
-                          cartItem.food, cartItem.selectedAddons);
-                    },
-                    onDecrement: () {
-                      restaurant.removeFromCart(cartItem);
-                    })
+                )
               ],
-            )
-          ],
-        ));
+            ));
       },
     );
   }
