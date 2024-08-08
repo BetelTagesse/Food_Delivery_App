@@ -54,7 +54,9 @@ class MycartTile extends StatelessWidget {
                           })
                     ],
                   ),
-                )
+                ),
+                //Addons
+                SizedBox(height: cartItem.selectedAddons.isEmpty ? 0 : 60),
               ],
             ));
       },
