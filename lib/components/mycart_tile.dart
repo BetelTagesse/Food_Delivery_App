@@ -16,7 +16,7 @@ class MycartTile extends StatelessWidget {
         return Container(
             decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondary,
-                borderRadius: BorderRadius.all(radius)),
+                borderRadius: BorderRadius.circular(8)),
             child: Column(
               children: [
                 Row(
