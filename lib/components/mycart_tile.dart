@@ -63,14 +63,22 @@ class MycartTile extends StatelessWidget {
                     children: cartItem.selectedAddons
                         .map(
                           (addon) => FilterChip(
-                              label: Row(
-                                children: [
-                                  Text(addon.name),
-                                  SizedBox(width: 5),
-                                  Text('\$${addon.price}'),
-                                ],
-                              ),
-                              onSelected: (value) {}),
+                            backgroundColor:
+                                Theme.of(context).colorScheme.secondary,
+                            labelStyle: TextStyle(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .inversePrimary,
+                                fontSize: 12),
+                            label: Row(
+                              children: [
+                                Text(addon.name),
+                                SizedBox(width: 5),
+                                Text('\$${addon.price}'),
+                              ],
+                            ),
+                            onSelected: (value) {},
+                          ),
                         )
                         .toList(),
                   ),
