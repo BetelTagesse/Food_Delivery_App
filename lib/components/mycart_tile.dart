@@ -60,6 +60,19 @@ class MycartTile extends StatelessWidget {
                   height: cartItem.selectedAddons.isEmpty ? 0 : 60,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
+                    children: cartItem.selectedAddons
+                        .map(
+                          (addon) => FilterChip(
+                              label: Row(
+                                children: [
+                                  Text(addon.name),
+                                  SizedBox(width: 5),
+                                  Text('\$${addon.price}'),
+                                ],
+                              ),
+                              onSelected: (value) {}),
+                        )
+                        .toList(),
                   ),
                 ),
               ],
