@@ -56,7 +56,12 @@ class MycartTile extends StatelessWidget {
                   ),
                 ),
                 //Addons
-                SizedBox(height: cartItem.selectedAddons.isEmpty ? 0 : 60),
+                SizedBox(
+                  height: cartItem.selectedAddons.isEmpty ? 0 : 60,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                  ),
+                ),
               ],
             ));
       },
