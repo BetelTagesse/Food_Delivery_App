@@ -74,7 +74,7 @@ class MycartTile extends StatelessWidget {
                               children: [
                                 Text(addon.name),
                                 SizedBox(width: 5),
-                                Text('\$${addon.price}'),
+                                Text('\$${(addon.price)}'),
                               ],
                             ),
                             onSelected: (value) {},
