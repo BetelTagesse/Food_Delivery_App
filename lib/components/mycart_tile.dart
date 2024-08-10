@@ -26,8 +26,12 @@ class MycartTile extends StatelessWidget {
                     children: [
                       ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(cartItem.food.imagePath,
-                              height: 100, width: 100)),
+                          child: Image.asset(
+                            cartItem.food.imagePath,
+                            height: 100,
+                            width: 100,
+                            fit: BoxFit.cover,
+                          )),
                       SizedBox(
                         width: 10,
                       ),
@@ -77,6 +81,10 @@ class MycartTile extends StatelessWidget {
                                 Text('\$${(addon.price)}'),
                               ],
                             ),
+                            shape: StadiumBorder(
+                                side: BorderSide(
+                                    color:
+                                        Theme.of(context).colorScheme.primary)),
                             onSelected: (value) {},
                           ),
                         )
