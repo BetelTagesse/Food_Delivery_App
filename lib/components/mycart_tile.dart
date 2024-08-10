@@ -40,12 +40,12 @@ class MycartTile extends StatelessWidget {
                           Text(
                             cartItem.food.name,
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           Text('\$${cartItem.food.price}'),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       MyQuantitySelector(
                           quantity: cartItem.quantity,
                           food: cartItem.food,
@@ -69,6 +69,7 @@ class MycartTile extends StatelessWidget {
                     children: cartItem.selectedAddons
                         .map(
                           (addon) => FilterChip(
+                            padding: EdgeInsets.only(right: 8),
                             backgroundColor:
                                 Theme.of(context).colorScheme.secondary,
                             labelStyle: TextStyle(
