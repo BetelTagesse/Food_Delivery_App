@@ -63,6 +63,8 @@ class MycartTile extends StatelessWidget {
                 SizedBox(
                   height: cartItem.selectedAddons.isEmpty ? 0 : 60,
                   child: ListView(
+                    padding:
+                        const EdgeInsets.only(left: 10, bottom: 10, right: 10),
                     scrollDirection: Axis.horizontal,
                     children: cartItem.selectedAddons
                         .map(
