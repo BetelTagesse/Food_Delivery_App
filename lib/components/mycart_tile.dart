@@ -38,10 +38,13 @@ class MycartTile extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            cartItem.food.name,
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold),
+                          SizedBox(
+                            width: 170,
+                            child: Text(
+                              cartItem.food.name,
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
                           ),
                           Text(
                             '\$${cartItem.food.price}',
