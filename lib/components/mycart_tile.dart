@@ -76,27 +76,30 @@ class MycartTile extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: cartItem.selectedAddons
                         .map(
-                          (addon) => FilterChip(
-                            padding: EdgeInsets.only(right: 8),
-                            backgroundColor:
-                                Theme.of(context).colorScheme.secondary,
-                            labelStyle: TextStyle(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .inversePrimary,
-                                fontSize: 12),
-                            label: Row(
-                              children: [
-                                Text(addon.name),
-                                SizedBox(width: 5),
-                                Text('\$${(addon.price)}'),
-                              ],
+                          (addon) => Padding(
+                            padding: const EdgeInsets.only(right: 8.0),
+                            child: FilterChip(
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.secondary,
+                              labelStyle: TextStyle(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .inversePrimary,
+                                  fontSize: 12),
+                              label: Row(
+                                children: [
+                                  Text(addon.name),
+                                  SizedBox(width: 5),
+                                  Text('\$${(addon.price)}'),
+                                ],
+                              ),
+                              shape: StadiumBorder(
+                                  side: BorderSide(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary)),
+                              onSelected: (value) {},
                             ),
-                            shape: StadiumBorder(
-                                side: BorderSide(
-                                    color:
-                                        Theme.of(context).colorScheme.primary)),
-                            onSelected: (value) {},
                           ),
                         )
                         .toList(),
