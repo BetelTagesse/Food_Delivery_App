@@ -36,13 +36,18 @@ class MycartTile extends StatelessWidget {
                         width: 10,
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             cartItem.food.name,
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
                           ),
-                          Text('\$${cartItem.food.price}'),
+                          Text(
+                            '\$${cartItem.food.price}',
+                            style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary),
+                          ),
                         ],
                       ),
                       const Spacer(),
