@@ -18,6 +18,7 @@ class CartPage extends StatelessWidget {
             ),
             backgroundColor: Colors.transparent,
             foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.delete))],
           ),
           body: Column(
             children: [
