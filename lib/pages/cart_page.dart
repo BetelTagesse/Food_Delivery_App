@@ -32,7 +32,10 @@ class CartPage extends StatelessWidget {
                                   child: const Text('Cancel'),
                                 ),
                                 TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pop(context),
+                                    restaurant.clearCart();
+                                  },
                                   child: const Text('Yes'),
                                 ),
                               ],
