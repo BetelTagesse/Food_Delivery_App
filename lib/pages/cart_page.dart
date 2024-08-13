@@ -29,11 +29,11 @@ class CartPage extends StatelessWidget {
                               actions: [
                                 TextButton(
                                   onPressed: () {},
-                                  child: Text('Cancel'),
+                                  child: const Text('Cancel'),
                                 ),
                                 TextButton(
                                   onPressed: () {},
-                                  child: Text('Yes'),
+                                  child: const Text('Yes'),
                                 ),
                               ],
                             ));
