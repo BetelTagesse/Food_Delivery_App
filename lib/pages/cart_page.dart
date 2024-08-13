@@ -28,7 +28,7 @@ class CartPage extends StatelessWidget {
                                   'Are you sure you want to clear the cart?'),
                               actions: [
                                 TextButton(
-                                  onPressed: () {},
+                                  onPressed: () => Navigator.pop(context),
                                   child: const Text('Cancel'),
                                 ),
                                 TextButton(
