@@ -33,7 +33,7 @@ class CartPage extends StatelessWidget {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    Navigator.pop(context),
+                                    Navigator.pop(context);
                                     restaurant.clearCart();
                                   },
                                   child: const Text('Yes'),
@@ -46,15 +46,17 @@ class CartPage extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Expanded(
-                child: ListView.builder(
-                  itemCount: userCart.length,
-                  itemBuilder: (context, index) {
-                    final cartItem = userCart[index];
-                    return MycartTile(cartItem: cartItem);
-                  },
-                ),
-              )
+              userCart.isEmpty
+                  ? const Center(child: Text('Cart is empty'))
+                  : Expanded(
+                      child: ListView.builder(
+                        itemCount: userCart.length,
+                        itemBuilder: (context, index) {
+                          final cartItem = userCart[index];
+                          return MycartTile(cartItem: cartItem);
+                        },
+                      ),
+                    )
             ],
           ),
         );
