@@ -14,7 +14,11 @@ class _MyWidgetState extends State<PaymentPage> {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Check out'),
+      ),
+      body: Column(
+        children: [],
       ),
     );
   }
