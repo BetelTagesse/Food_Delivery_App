@@ -67,6 +67,9 @@ class CartPage extends StatelessWidget {
                   onTap: () {},
                   text: 'Go to check out',
                 ),
+                SizedBox(
+                  height: 25,
+                ),
               ],
             ),
           ),
