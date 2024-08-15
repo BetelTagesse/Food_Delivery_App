@@ -9,6 +9,7 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<PaymentPage> {
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String cardNumber = '';
   String expiryDate = '';
   String cardHolderName = '';
@@ -33,6 +34,7 @@ class _MyWidgetState extends State<PaymentPage> {
             cvvCode: cvvCode,
             showBackView: isCvvFocused,
             onCreditCardWidgetChange: (p0) {},
+            key: formKey,
           ),
         ],
       ),
