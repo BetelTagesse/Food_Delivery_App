@@ -33,16 +33,16 @@ class _MyWidgetState extends State<PaymentPage> {
             cardHolderName: cardHolderName,
             cvvCode: cvvCode,
             showBackView: isCvvFocused,
-            onCreditCardWidgetChange: (data) {
-              setState(() {
-                cardNumber = data.cardNumber;
-                expiryDate = data.expiryDate;
-                cardHolderName = data.cardHolderName;
-                cvvCode = data.cvvCode;
-              });
-            },
+            onCreditCardWidgetChange: (p0) {},
             formKey: formKey,
           ),
+          CreditCardForm(
+              cardNumber: cardNumber,
+              expiryDate: expiryDate,
+              cardHolderName: cardHolderName,
+              cvvCode: cvvCode,
+              onCreditCardModelChange: onCreditCardModelChange,
+              formKey: formKey)
         ],
       ),
     );
