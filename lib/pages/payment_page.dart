@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
+import '../components/my_button.dart';
+
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key});
 
@@ -48,7 +50,10 @@ class _MyWidgetState extends State<PaymentPage> {
                   cvvCode = data.cvvCode;
                 });
               },
-              formKey: formKey)
+              formKey: formKey),
+          const Spacer(),
+          MyButton(onTap: () {}, text: 'Pay now'),
+          const SizedBox(height: 25),
         ],
       ),
     );
