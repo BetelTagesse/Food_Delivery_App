@@ -18,6 +18,25 @@ class _MyWidgetState extends State<PaymentPage> {
   String cvvCode = '';
   bool isCvvFocused = false;
 
+  void userTappedPay() {
+    if (formKey.currentState!.validate()) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Confirm Payment'),
+          content: ListBody(
+            children: [
+              Text("Card Number: $CardNumber"),
+              Text("Expiry Date: $expiryDate"),
+              Text("Card Holder Name: $cardHolderName"),
+              Text("CVV: $cvvCode"),
+            ],
+          ),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +71,7 @@ class _MyWidgetState extends State<PaymentPage> {
               },
               formKey: formKey),
           const Spacer(),
-          MyButton(onTap: () {}, text: 'Pay now'),
+          MyButton(onTap: () => userTappedPay(), text: 'Pay now'),
           const SizedBox(height: 25),
         ],
       ),
