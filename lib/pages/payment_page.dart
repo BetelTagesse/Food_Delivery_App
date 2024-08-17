@@ -26,12 +26,13 @@ class _MyWidgetState extends State<PaymentPage> {
           title: const Text('Confirm Payment'),
           content: ListBody(
             children: [
-              Text("Card Number: $CardNumber"),
+              Text("Card Number: $cardNumber"),
               Text("Expiry Date: $expiryDate"),
               Text("Card Holder Name: $cardHolderName"),
               Text("CVV: $cvvCode"),
             ],
           ),
+          actions: [],
         ),
       );
     }
