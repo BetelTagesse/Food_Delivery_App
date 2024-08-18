@@ -32,7 +32,19 @@ class _MyWidgetState extends State<PaymentPage> {
               Text("CVV: $cvvCode"),
             ],
           ),
-          actions: [],
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DeliveryPage()),
+              ),
+              child: Text('Confirm'),
+            ),
+          ],
         ),
       );
     }
