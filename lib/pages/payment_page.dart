@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:food_delivery_app/pages/delivery_page.dart';
 
 import '../components/my_button.dart';
 
@@ -40,7 +41,7 @@ class _MyWidgetState extends State<PaymentPage> {
             TextButton(
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DeliveryPage()),
+                MaterialPageRoute(builder: (context) => const DeliveryPage()),
               ),
               child: Text('Confirm'),
             ),
