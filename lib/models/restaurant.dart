@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/cart_item.dart';
 import 'package:food_delivery_app/models/food.dart';
+import 'package:intl/intl.dart';
 
 class Restaurant extends ChangeNotifier {
   final List<Food> _menu = [
@@ -396,7 +397,16 @@ class Restaurant extends ChangeNotifier {
     receipt.writeln("Here's your receipt");
     receipt.writeln();
 
-    String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss');
+    String formattedDate =
+        DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+
+    receipt.writeln(formattedDate);
+    receipt.writeln("---------");
+
+    for (final cartItem in _cart) {
+      receipt.writeln(
+          '${cartItem.quantity} x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}');
+    }
   }
 
   String _formatPrice(double price) {
