@@ -391,5 +391,23 @@ class Restaurant extends ChangeNotifier {
 
 //Generate a receipt
 
+  String displayCartReceipt() {
+    final receipt = StringBuffer();
+    receipt.writeln("Here's your receipt");
+    receipt.writeln();
+
+    String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss');
+  }
+
+  String _formatPrice(double price) {
+    return '\$${price.toStringAsFixed(2)}';
+  }
+
+  String _formatAddons(List<Addon> addons) {
+    return addons
+        .map((addon) => '${addon.name} (${_formatPrice(addon.price)})')
+        .join(', ');
+  }
+
 //
 }
