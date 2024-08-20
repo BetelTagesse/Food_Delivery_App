@@ -25,6 +25,8 @@ class MyReceipt extends StatelessWidget {
               child: Consumer<Restaurant>(
                   builder: (context, restaurant, child) =>
                       Text(restaurant.displayCartReceipt()))),
+          SizedBox(height: 25),
+          Text('Estimated delivery time is : 4:10 ')
         ],
       ),
     );
