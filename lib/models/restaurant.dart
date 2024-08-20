@@ -406,20 +406,17 @@ class Restaurant extends ChangeNotifier {
     for (final cartItem in _cart) {
       receipt.writeln(
           '${cartItem.quantity} x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}');
-          if(cartItem.selectedAddons.isNotEmpty){
-            receipt.writeln(' Add-on: ${_formatAddons(cartItem.selectedAddons)}')
-
-          }
-          receipt.writeln();
+      if (cartItem.selectedAddons.isNotEmpty) {
+        receipt.writeln(' Add-on: ${_formatAddons(cartItem.selectedAddons)}');
+      }
+      receipt.writeln();
     }
     receipt.writeln('------');
-        receipt.writeln('');
+    receipt.writeln('');
     receipt.writeln('Total Items : ${getTotalItemCount()}');
-        receipt.writeln('Total price : ${_formatPrice(getTotalPrice())}');
+    receipt.writeln('Total price : ${_formatPrice(getTotalPrice())}');
 
-        return receipt.toString();
-
-
+    return receipt.toString();
   }
 
   String _formatPrice(double price) {
