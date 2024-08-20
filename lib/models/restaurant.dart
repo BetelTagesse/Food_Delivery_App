@@ -413,7 +413,13 @@ class Restaurant extends ChangeNotifier {
           receipt.writeln();
     }
     receipt.writeln('------');
-    
+        receipt.writeln('');
+    receipt.writeln('Total Items : ${getTotalItemCount()}');
+        receipt.writeln('Total price : ${_formatPrice(getTotalPrice())}');
+
+        return receipt.toString();
+
+
   }
 
   String _formatPrice(double price) {
