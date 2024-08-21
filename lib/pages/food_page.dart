@@ -46,7 +46,7 @@ class _FoodPageState extends State<FoodPage> {
                   child: Image.asset(
                     widget.food.imagePath,
                     width: double.infinity,
-                    height: screenHeight * 0.5,
+                    height: screenHeight * 0.45,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -124,7 +124,8 @@ class _FoodPageState extends State<FoodPage> {
                       MyButton(
                           onTap: () =>
                               addToCart(widget.food, widget.selectedAddons),
-                          text: 'Add To Cart')
+                          text: 'Add To Cart'),
+                      SizedBox(height: 18),
                     ],
                   ),
                 ),
