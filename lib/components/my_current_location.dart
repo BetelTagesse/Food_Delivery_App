@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/models/restaurant.dart';
+import 'package:provider/provider.dart';
 
 class MyCurrentLocation extends StatelessWidget {
   const MyCurrentLocation({super.key});
@@ -20,11 +22,13 @@ class MyCurrentLocation extends StatelessWidget {
             onTap: () => openLocationSearchBox(context),
             child: Row(
               children: [
-                Text(
-                  '6901 HollyWood Blv',
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                      fontWeight: FontWeight.bold),
+                Consumer<Restaurant>(
+                  builder: (context, restaurant, child) => Text(
+                    restaurant.deliveryAddress,
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Icon(Icons.keyboard_arrow_down_rounded)
               ],
@@ -42,7 +46,7 @@ void openLocationSearchBox(BuildContext context) {
     builder: (context) => AlertDialog(
         title: Text('Your location'),
         content: TextField(
-          decoration: const InputDecoration(hintText: 'Search address..'),
+          decoration: const InputDecoration(hintText: 'Enter search address..'),
         ),
         actions: [
           MaterialButton(

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/services/auth/auth_gate.dart';
 import 'package:food_delivery_app/services/auth/login_or_register.dart';
 import 'package:food_delivery_app/firebase_options.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: LoginOrRegister(),
+      home: const AuthGate(),
     );
   }
 }

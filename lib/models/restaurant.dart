@@ -5,6 +5,7 @@ import 'package:food_delivery_app/models/food.dart';
 import 'package:intl/intl.dart';
 
 class Restaurant extends ChangeNotifier {
+  //List of food menu
   final List<Food> _menu = [
     //Burgers
     Food(
@@ -319,13 +320,18 @@ class Restaurant extends ChangeNotifier {
     ),
   ];
 
+//user cart
+  final List<CartItem> _cart = [];
+
+//Delivery address
+  String _deliveryAddress = '99 Hollywood Blv';
+
 //Getters
   List<Food> get menu => _menu;
   List<CartItem> get cart => _cart;
+  String get deliveryAddress => _deliveryAddress;
 
 //OPERATIONS
-
-  final List<CartItem> _cart = [];
 
 //add to the cart
 
@@ -385,6 +391,12 @@ class Restaurant extends ChangeNotifier {
 //clear cart
   void clearCart() {
     _cart.clear();
+    notifyListeners();
+  }
+
+// update delivery address
+  void updateDeliveryAddress(String newAddress) {
+    _deliveryAddress = newAddress;
     notifyListeners();
   }
 
