@@ -8,10 +8,10 @@ class DeliveryProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Delivery progress page'),
+          title: const Text('Delivery progress page'),
         ),
         bottomNavigationBar: _buildBottomNavBar(context),
-        body: Column(
+        body: const Column(
           children: [
             MyReceipt(),
           ],
@@ -23,11 +23,12 @@ class DeliveryProgressPage extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(40),
             topRight: Radius.circular(40),
           ),
         ),
+        padding: const EdgeInsets.all(25),
         child: Row(
           children: [
             Container(
@@ -37,12 +38,50 @@ class DeliveryProgressPage extends StatelessWidget {
               ),
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
               ),
             ),
             const SizedBox(width: 10),
             Column(
-              children: [],
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Bethel',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Theme.of(context).colorScheme.inversePrimary)),
+                Text('Driver',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.primary)),
+              ],
+            ),
+            const Spacer(),
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.background,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.message),
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.background,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.call),
+                      color: Colors.green),
+                ),
+              ],
             )
           ],
         ));
