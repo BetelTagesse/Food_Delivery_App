@@ -82,7 +82,7 @@ class DeliveryProgressPage extends StatelessWidget {
                       color: Colors.green),
                 ),
               ],
-            )
+            ),
           ],
         ));
   }
