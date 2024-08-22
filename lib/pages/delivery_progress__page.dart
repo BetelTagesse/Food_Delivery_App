@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_receipt.dart';
 import 'package:food_delivery_app/services/auth/database/firestore.dart';
+import 'package:provider/provider.dart';
+
+import '../models/restaurant.dart';
 
 class DeliveryProgressPage extends StatefulWidget {
   const DeliveryProgressPage({super.key});
@@ -10,7 +13,7 @@ class DeliveryProgressPage extends StatefulWidget {
 }
 
 class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
-  FirestoreService db = FireStoreSrtvice();
+  FireStoreService db = FireStoreService();
 
   @override
   void initState() {

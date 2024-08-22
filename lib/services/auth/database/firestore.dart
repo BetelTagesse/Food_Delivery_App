@@ -1,15 +1,18 @@
-import 'dart:js_interop';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:collection/collection.dart';
-
-class FireStoreSetvice {
+class FireStoreService {
   final CollectionReference orders =
-      FirebaseFireStore.instance.collection('orders');
+      FirebaseFirestore.instance.collection('orders');
 
   Future<void> saveOrderToDatabase(String receipt) async {
-    await orders.add({
-      'date': DateTime.now(),
-      'order': receipt,
-    });
+    try {
+      await orders.add({
+        'date': DateTime.now(),
+        'order': receipt,
+      });
+    } catch (e) {
+      print('Error saving order to Firestore: $e');
+      // Optionally, rethrow the error or handle it as needed
+    }
   }
 }
